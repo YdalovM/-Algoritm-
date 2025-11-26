@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2025-11-26T00:00:00.000Z" agent="GPT-5.1 Codex" version="24.7.5">
+<mxfile host="app.diagrams.net" modified="2025-11-26T00:30:00.000Z" agent="GPT-5.1 Codex" version="24.7.5">
   <diagram id="hotel-context" name="Контекстная диаграмма">
     <mxGraphModel dx="880" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
       <root>
@@ -45,6 +45,116 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="14" value="Статус уборки,\nготовность номера" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;strokeColor=#1a1a1a" edge="1" parent="1" source="6" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="hotel-decomposition" name="Диаграмма декомпозиции">
+    <mxGraphModel dx="1060" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="d0" />
+        <mxCell id="d1" parent="d0" />
+        <mxCell id="d_client" value="Клиент" style="whiteSpace=wrap;html=1;fontSize=14;strokeColor=#1a1a1a;fillColor=#ffe6cc" vertex="1" parent="d1">
+          <mxGeometry x="80" y="260" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d_admin" value="Администратор\nресепшена" style="whiteSpace=wrap;html=1;fontSize=14;strokeColor=#1a1a1a;fillColor=#f8cecc" vertex="1" parent="d1">
+          <mxGeometry x="860" y="180" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d_payment" value="Платёжная\nсистема" style="whiteSpace=wrap;html=1;fontSize=14;strokeColor=#1a1a1a;fillColor=#d5e8d4" vertex="1" parent="d1">
+          <mxGeometry x="880" y="340" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d_housekeeping" value="Служба уборки" style="whiteSpace=wrap;html=1;fontSize=14;strokeColor=#1a1a1a;fillColor=#e1d5e7" vertex="1" parent="d1">
+          <mxGeometry x="860" y="480" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d_p1" value="1.0 Приём запроса\nи бронирование" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#1a1a1a;fillColor=#fff2cc" vertex="1" parent="d1">
+          <mxGeometry x="320" y="200" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="d_p2" value="2.0 Управление\nфондом номеров" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#1a1a1a;fillColor=#fff2cc" vertex="1" parent="d1">
+          <mxGeometry x="540" y="200" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="d_p3" value="3.0 Биллинг\nи оплаты" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#1a1a1a;fillColor=#fff2cc" vertex="1" parent="d1">
+          <mxGeometry x="540" y="380" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="d_p4" value="4.0 Координация\nобслуживания" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#1a1a1a;fillColor=#fff2cc" vertex="1" parent="d1">
+          <mxGeometry x="320" y="400" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="d_s1" value="D1 Каталог\nномеров" style="shape=mxgraph.flowchart.data;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#1a1a1a;fillColor=#f5f5f5" vertex="1" parent="d1">
+          <mxGeometry x="520" y="70" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d_s2" value="D2 Журнал\nзаселений" style="shape=mxgraph.flowchart.data;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#1a1a1a;fillColor=#f5f5f5" vertex="1" parent="d1">
+          <mxGeometry x="570" y="320" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d_s3" value="D3 Реестр\nоплат" style="shape=mxgraph.flowchart.data;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#1a1a1a;fillColor=#f5f5f5" vertex="1" parent="d1">
+          <mxGeometry x="760" y="420" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d_s4" value="D4 План\nуборок" style="shape=mxgraph.flowchart.data;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#1a1a1a;fillColor=#f5f5f5" vertex="1" parent="d1">
+          <mxGeometry x="260" y="540" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e1" value="Требования, данные клиента" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_client" target="d_p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e2" value="Подтверждение, статус" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p1" target="d_client">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e3" value="Запрос подбора номера" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p1" target="d_p2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e4" value="Доступный номер" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p2" target="d_p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e5" value="Данные для оплаты" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p1" target="d_p3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e6" value="Статус оплаты" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p3" target="d_p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e7" value="Поручения на заселение/выезд" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_admin" target="d_p2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e8" value="Графики, уведомления" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p2" target="d_admin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e9" value="Запрос подготовки номера" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p2" target="d_p4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e10" value="Готовность номера" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p4" target="d_p2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e11" value="Поручения на уборку" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p4" target="d_housekeeping">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e12" value="Отчёт об уборке" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_housekeeping" target="d_p4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e13" value="Запрос на оплату" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p3" target="d_payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e14" value="Статус транзакции" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_payment" target="d_p3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e15" value="Параметры номеров" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_s1" target="d_p2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e16" value="Обновление статуса" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p2" target="d_s1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e17" value="История занятости" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_s2" target="d_p2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e18" value="Даты заселения/выезда" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p2" target="d_s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e19" value="История оплат" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_s3" target="d_p3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e20" value="Запись транзакции" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p3" target="d_s3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e21" value="График уборок" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_s4" target="d_p4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e22" value="Планирование уборки" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;strokeColor=#1a1a1a" edge="1" parent="d1" source="d_p4" target="d_s4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
